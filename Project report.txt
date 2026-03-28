@@ -1,0 +1,84 @@
+📄 Project Report — Smart Assignment Manager
+1. Project Title
+
+Smart Assignment Manager
+
+2. Problem Statement
+
+Many students, professionals, and individuals struggle to keep track of their assignments, tasks, and deadlines. Missed deadlines can lead to poor academic performance, work delays, and unnecessary stress. Existing solutions are either too complex, require internet access, or lack a simple way to prioritize tasks automatically.
+
+The problem this project addresses is:
+
+How can we provide a simple, offline, and effective tool to manage assignments and deadlines with automatic prioritization?
+
+3. Objective
+
+The main objectives of this project are:
+
+Create a simple, user-friendly interface to add, view, complete, and delete assignments.
+Implement an automatic priority system based on the time remaining until the deadline.
+Store all data persistently using SQLite, ensuring assignments are saved between sessions.
+Make the system accessible to anyone using Python only, without external dependencies.
+4. Significance of the Problem
+Students often forget deadlines, leading to academic setbacks.
+Professionals need a quick way to track work tasks without complex software.
+Time management is a critical skill, and a simple tool can improve productivity and reduce stress.
+A lightweight, offline solution ensures accessibility without relying on internet or cloud apps.
+5. Tools and Technologies Used
+Tool/Technology	Purpose
+Python 3.x	Core programming language for logic and CLI
+SQLite	Database for persistent storage of assignments
+Standard Python libraries	datetime, os, sqlite3, random, re for functionality
+6. Approach and Methodology
+Step 1: Requirement Analysis
+Understand what tasks users need to manage.
+Decide essential features: Add, View, Complete, Delete, and Priority.
+Step 2: Designing the System
+CLI-based menu system for simplicity.
+SQLite database to store assignments persistently.
+Priority algorithm based on days left until the deadline:
+High: ≤1 day
+Medium: ≤3 days
+Low: >3 days
+Overdue: deadline passed
+Step 3: Implementation
+Implemented a menu-driven interface in Python.
+Added input validation for titles and deadlines.
+Integrated automatic priority calculation using Python’s datetime.
+Added error handling for invalid inputs and IDs.
+Step 4: Testing
+Tested adding, viewing, completing, and deleting assignments.
+Verified priority labels update correctly as deadlines approach.
+Ensured database persists data across multiple runs.
+7. Key Decisions
+CLI over GUI: Chosen for simplicity and wide accessibility.
+SQLite: Lightweight and requires no external installation.
+Python Standard Libraries Only: Ensures project runs on any system with Python installed.
+Priority Labels: High, Medium, Low, Overdue chosen for quick understanding of urgency.
+8. Challenges Faced
+Date input validation
+Users may enter wrong formats; solved by using datetime.strptime() and validation loops.
+Persistent storage
+SQLite database needed to be accessible across sessions; solved by initializing the database at program start.
+Error handling
+Invalid IDs for completing or deleting tasks could crash the program; solved with checks and user feedback.
+Offline functionality
+Ensuring the project works entirely offline without external libraries or internet.
+9. Learning Outcomes
+Learned to design a functional CLI application.
+Gained experience with Python and SQLite integration.
+Developed skills in input validation, error handling, and persistent storage.
+Learned how to calculate priorities dynamically using datetime.
+Understood the importance of user experience even in command-line applications.
+10. Future Enhancements
+Add search and filter functionality for assignments.
+Create a GUI version using Tkinter for better usability.
+Export assignments to CSV or Excel for reporting.
+Add reminder notifications for upcoming deadlines.
+Integrate AI suggestions for task management based on usage patterns.
+11. Conclusion
+
+The Smart Assignment Manager successfully provides a lightweight, offline solution for managing assignments and deadlines. It demonstrates a practical application of Python, SQLite, and logical programming concepts.
+
+The project is user-friendly, efficient, and robust, with clear prioritization, persistent storage, and essential task management functionalities. This project is suitable for submission as a BYOP capstone, showcasing problem-solving skills and applied programming knowledge.
+
